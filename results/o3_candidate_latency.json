@@ -1,0 +1,73 @@
+{
+  "experiment": "O3 candidate",
+  "index": "products",
+  "trials_per_query": 30,
+  "queries": [
+    {
+      "query": "laptop for students",
+      "trials": 30,
+      "successful": 30,
+      "errors": 0,
+      "p50_ms": 53.14065000004575,
+      "p95_ms": 59.5240600000011,
+      "p99_ms": 60.22820999992291,
+      "max_ms": 60.46339999988959,
+      "avg_ms": 54.03888666664898
+    },
+    {
+      "query": "budget programming laptop",
+      "trials": 30,
+      "successful": 30,
+      "errors": 0,
+      "p50_ms": 52.32245000001967,
+      "p95_ms": 58.486299999992745,
+      "p99_ms": 77.77610900013545,
+      "max_ms": 85.11540000017703,
+      "avg_ms": 52.83417999999074
+    },
+    {
+      "query": "gaming laptop",
+      "trials": 30,
+      "successful": 30,
+      "errors": 0,
+      "p50_ms": 52.81999999999698,
+      "p95_ms": 58.4124200000474,
+      "p99_ms": 59.66754400007403,
+      "max_ms": 59.895600000118066,
+      "avg_ms": 53.08936333336381
+    },
+    {
+      "query": "wireless headphones",
+      "trials": 30,
+      "successful": 30,
+      "errors": 0,
+      "p50_ms": 53.43564999998307,
+      "p95_ms": 57.25701000000072,
+      "p99_ms": 57.747758000082285,
+      "max_ms": 57.817300000124305,
+      "avg_ms": 53.4209466666501
+    },
+    {
+      "query": "mobile phone",
+      "trials": 30,
+      "successful": 30,
+      "errors": 0,
+      "p50_ms": 52.862650000065514,
+      "p95_ms": 57.59113000000298,
+      "p99_ms": 57.855413999916436,
+      "max_ms": 57.943399999885514,
+      "avg_ms": 51.53166333330622
+    }
+  ],
+  "overall": {
+    "documents": 2000,
+    "total_trials": 150,
+    "successful": 150,
+    "errors": 0,
+    "p50_ms": 52.95079999996233,
+    "p95_ms": 58.396304999973836,
+    "p99_ms": 60.185178000001535,
+    "max_ms": 85.11540000017703,
+    "avg_ms": 52.98300799999197
+  }
+}

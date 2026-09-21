@@ -1,0 +1,165 @@
+{
+  "source_index": "products",
+  "target_index": "products_reindexed",
+  "source_documents": 2000,
+  "target_documents": 2000,
+  "latency": {
+    "laptop for students": {
+      "original": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 46.47889999614563,
+        "average_ms": 50.12662999894625,
+        "p50_ms": 49.75864999869373,
+        "p95_ms": 53.873214996565366,
+        "p99_ms": 54.757969000493176,
+        "max_ms": 55.03750000207219
+      },
+      "reindexed": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 45.134999993024394,
+        "average_ms": 50.282200000462275,
+        "p50_ms": 49.7746500041103,
+        "p95_ms": 54.8568050020549,
+        "p99_ms": 56.15888200351037,
+        "max_ms": 56.60670000361279
+      }
+    },
+    "budget programming laptop": {
+      "original": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 46.551400009775534,
+        "average_ms": 51.066720001593545,
+        "p50_ms": 51.527250005165115,
+        "p95_ms": 54.37353000161238,
+        "p99_ms": 56.114788001723355,
+        "max_ms": 56.81449999974575
+      },
+      "reindexed": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 4.77149999642279,
+        "average_ms": 47.36894999999398,
+        "p50_ms": 48.375549995398615,
+        "p95_ms": 52.205205004429445,
+        "p99_ms": 52.32840999393375,
+        "max_ms": 52.366399992024526
+      }
+    },
+    "mobile phone with good camera": {
+      "original": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 45.843200001399964,
+        "average_ms": 49.245469998762324,
+        "p50_ms": 48.2372999904328,
+        "p95_ms": 54.27323999319924,
+        "p99_ms": 55.63579800480511,
+        "max_ms": 56.04000001039822
+      },
+      "reindexed": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 45.80520000308752,
+        "average_ms": 49.65583333396353,
+        "p50_ms": 49.25799999182345,
+        "p95_ms": 53.10051999476855,
+        "p99_ms": 54.17507900390774,
+        "max_ms": 54.59700000938028
+      }
+    },
+    "affordable gaming laptop": {
+      "original": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 47.158800007309765,
+        "average_ms": 51.12879333270636,
+        "p50_ms": 51.24059999798192,
+        "p95_ms": 55.31689999334048,
+        "p99_ms": 57.2683579979639,
+        "max_ms": 57.59599999873899
+      },
+      "reindexed": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 47.86710000189487,
+        "average_ms": 51.23417333428127,
+        "p50_ms": 50.81160000554519,
+        "p95_ms": 54.710740003793035,
+        "p99_ms": 55.58565699728206,
+        "max_ms": 55.91529999219347
+      }
+    },
+    "wireless headphones": {
+      "original": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 47.032800008310005,
+        "average_ms": 50.858553334061675,
+        "p50_ms": 50.97189999651164,
+        "p95_ms": 53.758145000756485,
+        "p99_ms": 56.60155300676706,
+        "max_ms": 57.6990000117803
+      },
+      "reindexed": {
+        "successful": 30,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "min_ms": 45.300700003281236,
+        "average_ms": 49.95677666641617,
+        "p50_ms": 49.54905000340659,
+        "p95_ms": 53.65894500428112,
+        "p99_ms": 54.75610700668767,
+        "max_ms": 55.18000001029577
+      }
+    }
+  },
+  "relevance": {
+    "laptop for students": {
+      "source_relevant": 5,
+      "target_relevant": 5,
+      "source_p5": 1.0,
+      "target_p5": 1.0,
+      "top5_identical": true
+    },
+    "budget programming laptop": {
+      "source_relevant": 3,
+      "target_relevant": 3,
+      "source_p5": 0.6,
+      "target_p5": 0.6,
+      "top5_identical": true
+    },
+    "mobile phone with good camera": {
+      "source_relevant": 0,
+      "target_relevant": 0,
+      "source_p5": 0.0,
+      "target_p5": 0.0,
+      "top5_identical": true
+    },
+    "affordable gaming laptop": {
+      "source_relevant": 4,
+      "target_relevant": 4,
+      "source_p5": 0.8,
+      "target_p5": 0.8,
+      "top5_identical": true
+    },
+    "wireless headphones": {
+      "source_relevant": 5,
+      "target_relevant": 5,
+      "source_p5": 1.0,
+      "target_p5": 1.0,
+      "top5_identical": true
+    }
+  }
+}

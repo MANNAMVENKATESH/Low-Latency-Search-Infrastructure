@@ -1,0 +1,4 @@
+elasticsearch==8.19.0
+fastapi
+uvicorn
+pytest

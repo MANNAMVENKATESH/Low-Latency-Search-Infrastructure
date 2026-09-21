@@ -1,0 +1,727 @@
+[
+  {
+    "query": "laptop for students",
+    "results": [
+      {
+        "rank": 1,
+        "doc_id": "P0212",
+        "title": "Lenovo Laptop for Students 212",
+        "price": 34309.69,
+        "score": 46.534046
+      },
+      {
+        "rank": 2,
+        "doc_id": "P0235",
+        "title": "Lenovo Laptop for Students 235",
+        "price": 35790.64,
+        "score": 46.534046
+      },
+      {
+        "rank": 3,
+        "doc_id": "P0324",
+        "title": "HP Laptop for Students 324",
+        "price": 41422.0,
+        "score": 46.534046
+      },
+      {
+        "rank": 4,
+        "doc_id": "P0353",
+        "title": "HP Laptop for Students 353",
+        "price": 50986.12,
+        "score": 46.534046
+      },
+      {
+        "rank": 5,
+        "doc_id": "P0399",
+        "title": "Lenovo Laptop for Students 399",
+        "price": 49491.67,
+        "score": 46.534046
+      },
+      {
+        "rank": 6,
+        "doc_id": "P0453",
+        "title": "Lenovo Laptop for Students 453",
+        "price": 76375.06,
+        "score": 46.534046
+      },
+      {
+        "rank": 7,
+        "doc_id": "P0469",
+        "title": "Acer Laptop for Students 469",
+        "price": 18462.94,
+        "score": 46.534046
+      },
+      {
+        "rank": 8,
+        "doc_id": "P0505",
+        "title": "HP Laptop for Students 505",
+        "price": 10399.32,
+        "score": 46.534046
+      },
+      {
+        "rank": 9,
+        "doc_id": "P0523",
+        "title": "Acer Laptop for Students 523",
+        "price": 91967.04,
+        "score": 46.534046
+      },
+      {
+        "rank": 10,
+        "doc_id": "P0570",
+        "title": "HP Laptop for Students 570",
+        "price": 42770.72,
+        "score": 46.534046
+      },
+      {
+        "rank": 11,
+        "doc_id": "P0619",
+        "title": "Acer Laptop for Students 619",
+        "price": 54413.77,
+        "score": 46.534046
+      },
+      {
+        "rank": 12,
+        "doc_id": "P0675",
+        "title": "Dell Laptop for Students 675",
+        "price": 55860.08,
+        "score": 46.534046
+      },
+      {
+        "rank": 13,
+        "doc_id": "P0700",
+        "title": "Acer Laptop for Students 700",
+        "price": 36406.87,
+        "score": 46.534046
+      },
+      {
+        "rank": 14,
+        "doc_id": "P0722",
+        "title": "HP Laptop for Students 722",
+        "price": 29647.22,
+        "score": 46.534046
+      },
+      {
+        "rank": 15,
+        "doc_id": "P0723",
+        "title": "HP Laptop for Students 723",
+        "price": 16767.0,
+        "score": 46.534046
+      },
+      {
+        "rank": 16,
+        "doc_id": "P0797",
+        "title": "Asus Laptop for Students 797",
+        "price": 46257.74,
+        "score": 46.534046
+      },
+      {
+        "rank": 17,
+        "doc_id": "P0812",
+        "title": "HP Laptop for Students 812",
+        "price": 67365.66,
+        "score": 46.534046
+      },
+      {
+        "rank": 18,
+        "doc_id": "P0821",
+        "title": "Dell Laptop for Students 821",
+        "price": 47558.79,
+        "score": 46.534046
+      },
+      {
+        "rank": 19,
+        "doc_id": "P0833",
+        "title": "HP Laptop for Students 833",
+        "price": 45489.86,
+        "score": 46.534046
+      },
+      {
+        "rank": 20,
+        "doc_id": "P0843",
+        "title": "HP Laptop for Students 843",
+        "price": 48132.09,
+        "score": 46.534046
+      }
+    ]
+  },
+  {
+    "query": "budget programming laptop",
+    "results": [
+      {
+        "rank": 1,
+        "doc_id": "P0521",
+        "title": "Asus Programming Laptop 521",
+        "price": 8430.46,
+        "score": 36.760406
+      },
+      {
+        "rank": 2,
+        "doc_id": "P0651",
+        "title": "Asus Programming Laptop 651",
+        "price": 7479.38,
+        "score": 36.760406
+      },
+      {
+        "rank": 3,
+        "doc_id": "P0715",
+        "title": "Asus Programming Laptop 715",
+        "price": 35700.72,
+        "score": 36.760406
+      },
+      {
+        "rank": 4,
+        "doc_id": "P0775",
+        "title": "Lenovo Programming Laptop 775",
+        "price": 7890.78,
+        "score": 36.760406
+      },
+      {
+        "rank": 5,
+        "doc_id": "P0825",
+        "title": "HP Programming Laptop 825",
+        "price": 34390.45,
+        "score": 36.760406
+      },
+      {
+        "rank": 6,
+        "doc_id": "P0918",
+        "title": "Asus Programming Laptop 918",
+        "price": 34879.37,
+        "score": 36.760406
+      },
+      {
+        "rank": 7,
+        "doc_id": "P0925",
+        "title": "Asus Programming Laptop 925",
+        "price": 20806.48,
+        "score": 36.760406
+      },
+      {
+        "rank": 8,
+        "doc_id": "P0984",
+        "title": "Dell Programming Laptop 984",
+        "price": 27742.35,
+        "score": 36.760406
+      },
+      {
+        "rank": 9,
+        "doc_id": "P0035",
+        "title": "Dell Programming Laptop 35",
+        "price": 18298.49,
+        "score": 36.760406
+      },
+      {
+        "rank": 10,
+        "doc_id": "P0100",
+        "title": "Asus Programming Laptop 100",
+        "price": 10390.07,
+        "score": 36.760406
+      },
+      {
+        "rank": 11,
+        "doc_id": "P0334",
+        "title": "Dell Programming Laptop 334",
+        "price": 80855.76,
+        "score": 32.760406
+      },
+      {
+        "rank": 12,
+        "doc_id": "P0522",
+        "title": "HP Programming Laptop 522",
+        "price": 87767.69,
+        "score": 32.760406
+      },
+      {
+        "rank": 13,
+        "doc_id": "P0769",
+        "title": "Lenovo Programming Laptop 769",
+        "price": 98789.89,
+        "score": 32.760406
+      },
+      {
+        "rank": 14,
+        "doc_id": "P0921",
+        "title": "Dell Programming Laptop 921",
+        "price": 92761.42,
+        "score": 32.760406
+      },
+      {
+        "rank": 15,
+        "doc_id": "P0073",
+        "title": "Asus Programming Laptop 73",
+        "price": 91912.06,
+        "score": 32.760406
+      },
+      {
+        "rank": 16,
+        "doc_id": "P0003",
+        "title": "Asus Programming Laptop 3",
+        "price": 72169.92,
+        "score": 32.760406
+      },
+      {
+        "rank": 17,
+        "doc_id": "P0114",
+        "title": "Apple Budget Smartphone 114",
+        "price": 19033.73,
+        "score": 24.799234
+      },
+      {
+        "rank": 18,
+        "doc_id": "P0210",
+        "title": "Xiaomi Budget Smartphone 210",
+        "price": 5835.93,
+        "score": 24.799234
+      },
+      {
+        "rank": 19,
+        "doc_id": "P0227",
+        "title": "OnePlus Budget Smartphone 227",
+        "price": 15484.76,
+        "score": 24.799234
+      },
+      {
+        "rank": 20,
+        "doc_id": "P0249",
+        "title": "Xiaomi Budget Smartphone 249",
+        "price": 53887.07,
+        "score": 24.799234
+      }
+    ]
+  },
+  {
+    "query": "gaming laptop",
+    "results": [
+      {
+        "rank": 1,
+        "doc_id": "P0145",
+        "title": "Lenovo Gaming Laptop 145",
+        "price": 38734.43,
+        "score": 20.82594
+      },
+      {
+        "rank": 2,
+        "doc_id": "P0148",
+        "title": "Acer Gaming Laptop 148",
+        "price": 68405.87,
+        "score": 20.82594
+      },
+      {
+        "rank": 3,
+        "doc_id": "P0207",
+        "title": "Lenovo Gaming Laptop 207",
+        "price": 9519.64,
+        "score": 20.82594
+      },
+      {
+        "rank": 4,
+        "doc_id": "P0279",
+        "title": "HP Gaming Laptop 279",
+        "price": 80788.65,
+        "score": 20.82594
+      },
+      {
+        "rank": 5,
+        "doc_id": "P0286",
+        "title": "Acer Gaming Laptop 286",
+        "price": 43040.47,
+        "score": 20.82594
+      },
+      {
+        "rank": 6,
+        "doc_id": "P0300",
+        "title": "Dell Gaming Laptop 300",
+        "price": 57660.26,
+        "score": 20.82594
+      },
+      {
+        "rank": 7,
+        "doc_id": "P0303",
+        "title": "Lenovo Gaming Laptop 303",
+        "price": 57642.56,
+        "score": 20.82594
+      },
+      {
+        "rank": 8,
+        "doc_id": "P0356",
+        "title": "HP Gaming Laptop 356",
+        "price": 3534.49,
+        "score": 20.82594
+      },
+      {
+        "rank": 9,
+        "doc_id": "P0383",
+        "title": "Dell Gaming Laptop 383",
+        "price": 23756.11,
+        "score": 20.82594
+      },
+      {
+        "rank": 10,
+        "doc_id": "P0422",
+        "title": "Dell Gaming Laptop 422",
+        "price": 82076.68,
+        "score": 20.82594
+      },
+      {
+        "rank": 11,
+        "doc_id": "P0432",
+        "title": "Lenovo Gaming Laptop 432",
+        "price": 14934.32,
+        "score": 20.82594
+      },
+      {
+        "rank": 12,
+        "doc_id": "P0446",
+        "title": "Acer Gaming Laptop 446",
+        "price": 39531.99,
+        "score": 20.82594
+      },
+      {
+        "rank": 13,
+        "doc_id": "P0455",
+        "title": "HP Gaming Laptop 455",
+        "price": 11116.61,
+        "score": 20.82594
+      },
+      {
+        "rank": 14,
+        "doc_id": "P0474",
+        "title": "Acer Gaming Laptop 474",
+        "price": 49009.08,
+        "score": 20.82594
+      },
+      {
+        "rank": 15,
+        "doc_id": "P0498",
+        "title": "Dell Gaming Laptop 498",
+        "price": 22143.95,
+        "score": 20.82594
+      },
+      {
+        "rank": 16,
+        "doc_id": "P0515",
+        "title": "HP Gaming Laptop 515",
+        "price": 41491.45,
+        "score": 20.82594
+      },
+      {
+        "rank": 17,
+        "doc_id": "P0529",
+        "title": "HP Gaming Laptop 529",
+        "price": 61617.7,
+        "score": 20.82594
+      },
+      {
+        "rank": 18,
+        "doc_id": "P0555",
+        "title": "Acer Gaming Laptop 555",
+        "price": 77582.47,
+        "score": 20.82594
+      },
+      {
+        "rank": 19,
+        "doc_id": "P0601",
+        "title": "Dell Gaming Laptop 601",
+        "price": 21902.55,
+        "score": 20.82594
+      },
+      {
+        "rank": 20,
+        "doc_id": "P0604",
+        "title": "Acer Gaming Laptop 604",
+        "price": 56546.66,
+        "score": 20.82594
+      }
+    ]
+  },
+  {
+    "query": "wireless headphones",
+    "results": [
+      {
+        "rank": 1,
+        "doc_id": "P0117",
+        "title": "Bose Wireless Headphones 117",
+        "price": 55367.11,
+        "score": 21.29226
+      },
+      {
+        "rank": 2,
+        "doc_id": "P0250",
+        "title": "Sony Wireless Headphones 250",
+        "price": 74096.14,
+        "score": 21.29226
+      },
+      {
+        "rank": 3,
+        "doc_id": "P0265",
+        "title": "Bose Wireless Headphones 265",
+        "price": 50807.73,
+        "score": 21.29226
+      },
+      {
+        "rank": 4,
+        "doc_id": "P0295",
+        "title": "JBL Wireless Headphones 295",
+        "price": 11819.4,
+        "score": 21.29226
+      },
+      {
+        "rank": 5,
+        "doc_id": "P0310",
+        "title": "JBL Wireless Headphones 310",
+        "price": 53499.65,
+        "score": 21.29226
+      },
+      {
+        "rank": 6,
+        "doc_id": "P0323",
+        "title": "Sony Wireless Headphones 323",
+        "price": 60206.53,
+        "score": 21.29226
+      },
+      {
+        "rank": 7,
+        "doc_id": "P0340",
+        "title": "JBL Wireless Headphones 340",
+        "price": 27555.86,
+        "score": 21.29226
+      },
+      {
+        "rank": 8,
+        "doc_id": "P0371",
+        "title": "Bose Wireless Headphones 371",
+        "price": 15277.97,
+        "score": 21.29226
+      },
+      {
+        "rank": 9,
+        "doc_id": "P0376",
+        "title": "JBL Wireless Headphones 376",
+        "price": 95394.45,
+        "score": 21.29226
+      },
+      {
+        "rank": 10,
+        "doc_id": "P0405",
+        "title": "Boat Wireless Headphones 405",
+        "price": 46073.77,
+        "score": 21.29226
+      },
+      {
+        "rank": 11,
+        "doc_id": "P0421",
+        "title": "Bose Wireless Headphones 421",
+        "price": 15004.58,
+        "score": 21.29226
+      },
+      {
+        "rank": 12,
+        "doc_id": "P0452",
+        "title": "JBL Wireless Headphones 452",
+        "price": 93374.96,
+        "score": 21.29226
+      },
+      {
+        "rank": 13,
+        "doc_id": "P0509",
+        "title": "JBL Wireless Headphones 509",
+        "price": 43490.74,
+        "score": 21.29226
+      },
+      {
+        "rank": 14,
+        "doc_id": "P0574",
+        "title": "Boat Wireless Headphones 574",
+        "price": 44419.09,
+        "score": 21.29226
+      },
+      {
+        "rank": 15,
+        "doc_id": "P0586",
+        "title": "Boat Wireless Headphones 586",
+        "price": 76200.64,
+        "score": 21.29226
+      },
+      {
+        "rank": 16,
+        "doc_id": "P0689",
+        "title": "JBL Wireless Headphones 689",
+        "price": 53522.07,
+        "score": 21.29226
+      },
+      {
+        "rank": 17,
+        "doc_id": "P0749",
+        "title": "Sony Wireless Headphones 749",
+        "price": 73066.85,
+        "score": 21.29226
+      },
+      {
+        "rank": 18,
+        "doc_id": "P0778",
+        "title": "Bose Wireless Headphones 778",
+        "price": 90579.46,
+        "score": 21.29226
+      },
+      {
+        "rank": 19,
+        "doc_id": "P0798",
+        "title": "Bose Wireless Headphones 798",
+        "price": 56654.69,
+        "score": 21.29226
+      },
+      {
+        "rank": 20,
+        "doc_id": "P0803",
+        "title": "Bose Wireless Headphones 803",
+        "price": 26508.06,
+        "score": 21.29226
+      }
+    ]
+  },
+  {
+    "query": "mobile phone",
+    "results": [
+      {
+        "rank": 1,
+        "doc_id": "SCALE01201",
+        "title": "OnePlus Mobile Phone 1201",
+        "price": 27105,
+        "score": 25.523643
+      },
+      {
+        "rank": 2,
+        "doc_id": "SCALE01211",
+        "title": "OnePlus Mobile Phone 1211",
+        "price": 17525,
+        "score": 25.523643
+      },
+      {
+        "rank": 3,
+        "doc_id": "SCALE01214",
+        "title": "OnePlus Mobile Phone 1214",
+        "price": 83987,
+        "score": 25.523643
+      },
+      {
+        "rank": 4,
+        "doc_id": "SCALE01215",
+        "title": "OnePlus Mobile Phone 1215",
+        "price": 33439,
+        "score": 25.523643
+      },
+      {
+        "rank": 5,
+        "doc_id": "SCALE01224",
+        "title": "Samsung Mobile Phone 1224",
+        "price": 58626,
+        "score": 25.523643
+      },
+      {
+        "rank": 6,
+        "doc_id": "SCALE01229",
+        "title": "Realme Mobile Phone 1229",
+        "price": 47607,
+        "score": 25.523643
+      },
+      {
+        "rank": 7,
+        "doc_id": "SCALE01230",
+        "title": "OnePlus Mobile Phone 1230",
+        "price": 45228,
+        "score": 25.523643
+      },
+      {
+        "rank": 8,
+        "doc_id": "SCALE01233",
+        "title": "Realme Mobile Phone 1233",
+        "price": 69449,
+        "score": 25.523643
+      },
+      {
+        "rank": 9,
+        "doc_id": "SCALE01252",
+        "title": "Realme Mobile Phone 1252",
+        "price": 15069,
+        "score": 25.523643
+      },
+      {
+        "rank": 10,
+        "doc_id": "SCALE01254",
+        "title": "Realme Mobile Phone 1254",
+        "price": 36737,
+        "score": 25.523643
+      },
+      {
+        "rank": 11,
+        "doc_id": "SCALE01259",
+        "title": "Realme Mobile Phone 1259",
+        "price": 23805,
+        "score": 25.523643
+      },
+      {
+        "rank": 12,
+        "doc_id": "SCALE01279",
+        "title": "OnePlus Mobile Phone 1279",
+        "price": 31571,
+        "score": 25.523643
+      },
+      {
+        "rank": 13,
+        "doc_id": "SCALE01283",
+        "title": "OnePlus Mobile Phone 1283",
+        "price": 63797,
+        "score": 25.523643
+      },
+      {
+        "rank": 14,
+        "doc_id": "SCALE01287",
+        "title": "Samsung Mobile Phone 1287",
+        "price": 32775,
+        "score": 25.523643
+      },
+      {
+        "rank": 15,
+        "doc_id": "SCALE01290",
+        "title": "Realme Mobile Phone 1290",
+        "price": 82694,
+        "score": 25.523643
+      },
+      {
+        "rank": 16,
+        "doc_id": "SCALE01308",
+        "title": "OnePlus Mobile Phone 1308",
+        "price": 38046,
+        "score": 25.523643
+      },
+      {
+        "rank": 17,
+        "doc_id": "SCALE01315",
+        "title": "Realme Mobile Phone 1315",
+        "price": 14656,
+        "score": 25.523643
+      },
+      {
+        "rank": 18,
+        "doc_id": "SCALE01326",
+        "title": "OnePlus Mobile Phone 1326",
+        "price": 51308,
+        "score": 25.523643
+      },
+      {
+        "rank": 19,
+        "doc_id": "SCALE01328",
+        "title": "Samsung Mobile Phone 1328",
+        "price": 22392,
+        "score": 25.523643
+      },
+      {
+        "rank": 20,
+        "doc_id": "SCALE01331",
+        "title": "Xiaomi Mobile Phone 1331",
+        "price": 58349,
+        "score": 25.523643
+      }
+    ]
+  }
+]

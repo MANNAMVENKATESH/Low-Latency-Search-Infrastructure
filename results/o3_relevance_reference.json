@@ -1,0 +1,37 @@
+{
+  "index": "products",
+  "documents": 2000,
+  "evaluation": [
+    {
+      "query": "laptop for students",
+      "retrieved": 20,
+      "relevant": 18,
+      "precision": 0.9
+    },
+    {
+      "query": "budget programming laptop",
+      "retrieved": 20,
+      "relevant": 10,
+      "precision": 0.5
+    },
+    {
+      "query": "gaming laptop",
+      "retrieved": 20,
+      "relevant": 20,
+      "precision": 1.0
+    },
+    {
+      "query": "wireless headphones",
+      "retrieved": 20,
+      "relevant": 20,
+      "precision": 1.0
+    },
+    {
+      "query": "mobile phone",
+      "retrieved": 20,
+      "relevant": 20,
+      "precision": 1.0
+    }
+  ],
+  "overall_precision": 0.88
+}
