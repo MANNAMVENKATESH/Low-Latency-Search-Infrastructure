@@ -291,11 +291,13 @@ def search(
         # O3 relevance strategy
         # ----------------------------------------------------
 
-        if q.lower().strip() == "budget programming laptop":
+       
+        normalized_query = q.lower().strip()
+
+        if normalized_query == "budget programming laptop":
 
             search_query = {
                 "bool": {
-
                     "must": [
                         {
                             "multi_match": {
@@ -308,7 +310,6 @@ def search(
                             }
                         }
                     ],
-
                     "should": [
                         {
                             "range": {
@@ -322,18 +323,64 @@ def search(
                 }
             }
 
+        
+        
         else:
 
-            search_query = {
-                "multi_match": {
-                    "query": q,
-                    "fields": [
-                        "title^5",
-                        "description^2",
-                        "tags^4"
-                    ]
-                }
+            category_map = {
+                "mobile": "Mobile",
+                "laptop": "Laptop",
+                "tablet": "Tablet",
+                "keyboard": "Keyboard",
+                "mouse": "Mouse",
+                "storage": "Storage",
+                "monitor": "Monitor",
+                "audio": "Audio"
             }
+
+            detected_category = next(
+                (
+                    category
+                    for keyword, category in category_map.items()
+                    if keyword in normalized_query.split()
+                ),
+                None
+            )
+
+            if detected_category:
+                search_query = {
+                    "bool": {
+                        "must": [
+                            {
+                                "term": {
+                                    "category": detected_category
+                                }
+                            },
+                            {
+                                "multi_match": {
+                                    "query": q,
+                                    "fields": [
+                                        "title^5",
+                                        "description^2",
+                                        "tags^4"
+                                    ],
+                                    "operator": "or"
+                                }
+                            }
+                        ]
+                    }
+                }
+            else:
+                search_query = {
+                    "multi_match": {
+                        "query": q,
+                        "fields": [
+                            "title^5",
+                            "description^2",
+                            "tags^4"
+                        ]
+                    }
+                }
 
         # ----------------------------------------------------
         # Elasticsearch search

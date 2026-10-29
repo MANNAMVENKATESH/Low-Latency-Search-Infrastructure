@@ -1,6 +1,6 @@
 {
   "benchmark": "CLOUD-30 O2 Latency Baseline",
-  "timestamp": "2026-10-26T02:35:52.174111",
+  "timestamp": "2026-10-30T01:35:49.422261",
   "elasticsearch_url": "http://localhost:9200",
   "index": "products",
   "document_count": 2000,
@@ -9,12 +9,12 @@
   "total_errors": 0,
   "overall_error_rate_percent": 0.0,
   "overall": {
-    "min_ms": 7.223,
-    "average_ms": 50.065,
-    "p50_ms": 49.871,
-    "p95_ms": 54.995,
-    "p99_ms": 57.513,
-    "max_ms": 58.362
+    "min_ms": 10.081,
+    "average_ms": 50.407,
+    "p50_ms": 49.9,
+    "p95_ms": 55.471,
+    "p99_ms": 58.723,
+    "max_ms": 65.624
   },
   "queries": {
     "laptop for students": {
@@ -22,60 +22,60 @@
       "successful_requests": 30,
       "errors": 0,
       "error_rate_percent": 0.0,
-      "min_ms": 47.345,
-      "average_ms": 51.038,
-      "p50_ms": 50.848,
-      "p95_ms": 56.761,
-      "p99_ms": 58.089,
-      "max_ms": 58.362
+      "min_ms": 47.874,
+      "average_ms": 52.17,
+      "p50_ms": 51.991,
+      "p95_ms": 56.109,
+      "p99_ms": 57.235,
+      "max_ms": 57.578
     },
     "budget programming laptop": {
       "trials": 30,
       "successful_requests": 30,
       "errors": 0,
       "error_rate_percent": 0.0,
-      "min_ms": 46.825,
-      "average_ms": 49.889,
-      "p50_ms": 49.83,
-      "p95_ms": 52.986,
-      "p99_ms": 53.744,
-      "max_ms": 54.014
+      "min_ms": 46.899,
+      "average_ms": 50.385,
+      "p50_ms": 49.46,
+      "p95_ms": 54.636,
+      "p99_ms": 56.994,
+      "max_ms": 57.854
     },
     "mobile phone with good camera": {
       "trials": 30,
       "successful_requests": 30,
       "errors": 0,
       "error_rate_percent": 0.0,
-      "min_ms": 47.27,
-      "average_ms": 50.841,
-      "p50_ms": 51.038,
-      "p95_ms": 55.447,
-      "p99_ms": 56.998,
-      "max_ms": 57.604
+      "min_ms": 46.556,
+      "average_ms": 50.927,
+      "p50_ms": 50.314,
+      "p95_ms": 57.766,
+      "p99_ms": 63.865,
+      "max_ms": 65.624
     },
     "affordable gaming laptop": {
       "trials": 30,
       "successful_requests": 30,
       "errors": 0,
       "error_rate_percent": 0.0,
-      "min_ms": 46.449,
-      "average_ms": 49.203,
-      "p50_ms": 48.53,
-      "p95_ms": 53.114,
-      "p99_ms": 53.736,
-      "max_ms": 53.766
+      "min_ms": 46.237,
+      "average_ms": 49.771,
+      "p50_ms": 49.164,
+      "p95_ms": 54.177,
+      "p99_ms": 56.314,
+      "max_ms": 57.077
     },
     "wireless headphones": {
       "trials": 30,
       "successful_requests": 30,
       "errors": 0,
       "error_rate_percent": 0.0,
-      "min_ms": 7.223,
-      "average_ms": 49.355,
-      "p50_ms": 50.477,
-      "p95_ms": 54.804,
-      "p99_ms": 56.395,
-      "max_ms": 56.999
+      "min_ms": 10.081,
+      "average_ms": 48.783,
+      "p50_ms": 49.811,
+      "p95_ms": 54.852,
+      "p99_ms": 55.229,
+      "max_ms": 55.342
     }
   }
 }
