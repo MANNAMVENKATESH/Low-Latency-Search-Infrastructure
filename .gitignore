@@ -5,3 +5,6 @@ __pycache__/
 .env
 .DS_Store
 ////
+# Local startup scripts
+/start-cloud30.bat
+/start-cloud30.ps1
