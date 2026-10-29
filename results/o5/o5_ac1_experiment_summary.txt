@@ -1,0 +1,29 @@
+﻿CLOUD-30 O5 AC-1 CONTROLLED DATA-CHANGE EXPERIMENT
+
+Test index: products_o5_test
+Initial document count: 2000
+Changed document: P0212
+Field changed: price
+Before price: 34309.69
+After price: 89999.00
+
+Queries tested:
+1. laptop for students
+   Top-five positions changed: 5
+   P0212 was not present in the post-change top 20.
+   Search fields were title, description, and tags.
+   Equal scores were observed among returned documents.
+   Cause of rank change is not conclusively established.
+
+2. budget programming laptop
+   Top-five positions changed: 0
+
+3. wireless headphones
+   Top-five positions changed: 0
+
+Conclusion:
+This experiment demonstrates a controlled data update and records
+the resulting ranking snapshots. It does not establish that price
+changes caused the ranking change, because price was not included
+in the query fields and tied scores can affect ordering.
+Full AC-1 acceptance remains unverified.

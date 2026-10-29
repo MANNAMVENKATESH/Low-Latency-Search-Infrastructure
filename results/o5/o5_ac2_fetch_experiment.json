@@ -1,0 +1,81 @@
+﻿{
+    "benchmark":  "CLOUD-30 O5 AC-2 Fetch Optimization Experiment",
+    "timestamp":  "2026-10-26T02:47:52.018157",
+    "elasticsearch_url":  "http://localhost:9200",
+    "index":  "products",
+    "document_count":  2000,
+    "trials_per_query":  30,
+    "total_requests":  150,
+    "total_errors":  0,
+    "overall_error_rate_percent":  0.0,
+    "overall":  {
+                    "min_ms":  5.607,
+                    "average_ms":  50.813,
+                    "p50_ms":  49.889,
+                    "p95_ms":  55.408,
+                    "p99_ms":  60.438,
+                    "max_ms":  164.56
+                },
+    "queries":  {
+                    "laptop for students":  {
+                                                "trials":  30,
+                                                "successful_requests":  30,
+                                                "errors":  0,
+                                                "error_rate_percent":  0.0,
+                                                "min_ms":  47.711,
+                                                "average_ms":  51.167,
+                                                "p50_ms":  50.58,
+                                                "p95_ms":  56.924,
+                                                "p99_ms":  57.23,
+                                                "max_ms":  57.35
+                                            },
+                    "budget programming laptop":  {
+                                                      "trials":  30,
+                                                      "successful_requests":  30,
+                                                      "errors":  0,
+                                                      "error_rate_percent":  0.0,
+                                                      "min_ms":  46.619,
+                                                      "average_ms":  49.974,
+                                                      "p50_ms":  49.541,
+                                                      "p95_ms":  54.496,
+                                                      "p99_ms":  54.942,
+                                                      "max_ms":  55.107
+                                                  },
+                    "mobile phone with good camera":  {
+                                                          "trials":  30,
+                                                          "successful_requests":  30,
+                                                          "errors":  0,
+                                                          "error_rate_percent":  0.0,
+                                                          "min_ms":  47.374,
+                                                          "average_ms":  50.322,
+                                                          "p50_ms":  50.819,
+                                                          "p95_ms":  52.215,
+                                                          "p99_ms":  56.478,
+                                                          "max_ms":  58.196
+                                                      },
+                    "affordable gaming laptop":  {
+                                                     "trials":  30,
+                                                     "successful_requests":  30,
+                                                     "errors":  0,
+                                                     "error_rate_percent":  0.0,
+                                                     "min_ms":  46.039,
+                                                     "average_ms":  50.271,
+                                                     "p50_ms":  48.855,
+                                                     "p95_ms":  54.658,
+                                                     "p99_ms":  58.506,
+                                                     "max_ms":  60.066
+                                                 },
+                    "wireless headphones":  {
+                                                "trials":  30,
+                                                "successful_requests":  30,
+                                                "errors":  0,
+                                                "error_rate_percent":  0.0,
+                                                "min_ms":  5.607,
+                                                "average_ms":  52.333,
+                                                "p50_ms":  48.727,
+                                                "p95_ms":  57.913,
+                                                "p99_ms":  134.468,
+                                                "max_ms":  164.56
+                                            }
+                }
+}

@@ -1,0 +1,191 @@
+﻿{
+    "experiment":  "CLOUD-30 O5 AC-1 baseline",
+    "index":  "products_o5_test",
+    "document_count":  2000,
+    "captured_at":  "2026-10-26T01:58:38.3523787+05:30",
+    "queries":  [
+                    {
+                        "query":  "laptop for students",
+                        "total_hits":  2000,
+                        "top_results":  [
+                                            {
+                                                "score":  9.306809,
+                                                "title":  "Lenovo Laptop for Students 212",
+                                                "category":  "Laptop",
+                                                "price":  34309.69,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "lenovo",
+                                                             "laptop_for_students"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  9.306809,
+                                                "title":  "Lenovo Laptop for Students 235",
+                                                "category":  "Laptop",
+                                                "price":  35790.64,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "lenovo",
+                                                             "laptop_for_students"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  9.306809,
+                                                "title":  "HP Laptop for Students 324",
+                                                "category":  "Laptop",
+                                                "price":  41422.0,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "hp",
+                                                             "laptop_for_students"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  9.306809,
+                                                "title":  "HP Laptop for Students 353",
+                                                "category":  "Laptop",
+                                                "price":  50986.12,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "hp",
+                                                             "laptop_for_students"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  9.306809,
+                                                "title":  "Lenovo Laptop for Students 399",
+                                                "category":  "Laptop",
+                                                "price":  49491.67,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "lenovo",
+                                                             "laptop_for_students"
+                                                         ]
+                                            }
+                                        ]
+                    },
+                    {
+                        "query":  "budget programming laptop",
+                        "total_hits":  1283,
+                        "top_results":  [
+                                            {
+                                                "score":  6.552082,
+                                                "title":  "Dell Programming Laptop 334",
+                                                "category":  "Laptop",
+                                                "price":  80855.76,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "dell",
+                                                             "programming_laptop"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  6.552082,
+                                                "title":  "Asus Programming Laptop 521",
+                                                "category":  "Laptop",
+                                                "price":  8430.46,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "asus",
+                                                             "programming_laptop"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  6.552082,
+                                                "title":  "HP Programming Laptop 522",
+                                                "category":  "Laptop",
+                                                "price":  87767.69,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "hp",
+                                                             "programming_laptop"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  6.552082,
+                                                "title":  "Asus Programming Laptop 651",
+                                                "category":  "Laptop",
+                                                "price":  7479.38,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "asus",
+                                                             "programming_laptop"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  6.552082,
+                                                "title":  "Asus Programming Laptop 715",
+                                                "category":  "Laptop",
+                                                "price":  35700.72,
+                                                "tags":  [
+                                                             "laptop",
+                                                             "asus",
+                                                             "programming_laptop"
+                                                         ]
+                                            }
+                                        ]
+                    },
+                    {
+                        "query":  "wireless headphones",
+                        "total_hits":  367,
+                        "top_results":  [
+                                            {
+                                                "score":  4.3416147,
+                                                "title":  "Bose Wireless Headphones 117",
+                                                "category":  "Audio",
+                                                "price":  55367.11,
+                                                "tags":  [
+                                                             "audio",
+                                                             "bose",
+                                                             "wireless_headphones"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  4.3416147,
+                                                "title":  "Sony Wireless Headphones 250",
+                                                "category":  "Audio",
+                                                "price":  74096.14,
+                                                "tags":  [
+                                                             "audio",
+                                                             "sony",
+                                                             "wireless_headphones"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  4.3416147,
+                                                "title":  "Bose Wireless Headphones 265",
+                                                "category":  "Audio",
+                                                "price":  50807.73,
+                                                "tags":  [
+                                                             "audio",
+                                                             "bose",
+                                                             "wireless_headphones"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  4.3416147,
+                                                "title":  "JBL Wireless Headphones 295",
+                                                "category":  "Audio",
+                                                "price":  11819.4,
+                                                "tags":  [
+                                                             "audio",
+                                                             "jbl",
+                                                             "wireless_headphones"
+                                                         ]
+                                            },
+                                            {
+                                                "score":  4.3416147,
+                                                "title":  "JBL Wireless Headphones 310",
+                                                "category":  "Audio",
+                                                "price":  53499.65,
+                                                "tags":  [
+                                                             "audio",
+                                                             "jbl",
+                                                             "wireless_headphones"
+                                                         ]
+                                            }
+                                        ]
+                    }
+                ]
+}

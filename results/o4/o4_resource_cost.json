@@ -1,0 +1,23 @@
+{
+  "experiment": "O4 Resource and Cost Control",
+  "environment": "local Docker",
+  "index": "products",
+  "documents": 2000,
+  "controlled_workload": {
+    "requests": 150,
+    "successful_requests": 150,
+    "failed_requests": 0,
+    "availability_percent": 100.0,
+    "error_rate_percent": 0.0
+  },
+  "resource_measurement": {
+    "container": "cloud30-elasticsearch",
+    "memory_limit_gib": 7.596,
+    "memory_before_gib": 1.471,
+    "memory_after_gib": 1.472,
+    "memory_percent_before": 19.37,
+    "memory_percent_after": 19.37,
+    "cpu_percent_before": 0.91,
+    "cpu_percent_after": 2.85
+  }
+}

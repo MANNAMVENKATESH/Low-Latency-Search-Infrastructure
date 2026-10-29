@@ -1,0 +1,142 @@
+{
+  "benchmark": "CLOUD-30 O5 AC-2 Paired A/B Latency Experiment",
+  "timestamp": "2026-10-26T03:07:19.197864",
+  "elasticsearch_url": "http://localhost:9200",
+  "index": "products",
+  "document_count": 2000,
+  "trials_per_query_per_variant": 30,
+  "method": "Paired A/B test with alternating request order, one warm-up per variant per query, and 30 measured trials per query.",
+  "variants": {
+    "A_full_source": {
+      "source_filter": null,
+      "queries": {
+        "laptop for students": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.613,
+          "p50_ms": 48.038,
+          "p95_ms": 51.679,
+          "p99_ms": 54.928,
+          "max_ms": 56.238
+        },
+        "budget programming laptop": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.445,
+          "p50_ms": 47.985,
+          "p95_ms": 52.373,
+          "p99_ms": 55.097,
+          "max_ms": 56.147
+        },
+        "mobile phone with good camera": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.802,
+          "p50_ms": 48.158,
+          "p95_ms": 53.358,
+          "p99_ms": 56.032,
+          "max_ms": 56.776
+        },
+        "affordable gaming laptop": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.464,
+          "p50_ms": 48.184,
+          "p95_ms": 51.461,
+          "p99_ms": 53.797,
+          "max_ms": 54.643
+        },
+        "wireless headphones": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.506,
+          "p50_ms": 47.862,
+          "p95_ms": 52.476,
+          "p99_ms": 53.124,
+          "max_ms": 53.355
+        }
+      },
+      "summary": {
+        "expected_requests": 150,
+        "successful_requests": 150,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "minimum_ms": 45.139,
+        "average_ms": 48.566,
+        "p50_ms": 48.083,
+        "p95_ms": 52.459,
+        "p99_ms": 56.194,
+        "maximum_ms": 56.776
+      }
+    },
+    "B_selected_fields": {
+      "source_filter": [
+        "title",
+        "price",
+        "category",
+        "brand",
+        "rating",
+        "tags"
+      ],
+      "queries": {
+        "laptop for students": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 49.175,
+          "p50_ms": 48.84,
+          "p95_ms": 53.344,
+          "p99_ms": 55.068,
+          "max_ms": 55.578
+        },
+        "budget programming laptop": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 47.224,
+          "p50_ms": 48.459,
+          "p95_ms": 51.828,
+          "p99_ms": 52.389,
+          "max_ms": 52.586
+        },
+        "mobile phone with good camera": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 49.168,
+          "p50_ms": 48.814,
+          "p95_ms": 52.602,
+          "p99_ms": 54.98,
+          "max_ms": 55.899
+        },
+        "affordable gaming laptop": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.391,
+          "p50_ms": 48.155,
+          "p95_ms": 50.564,
+          "p99_ms": 51.929,
+          "max_ms": 52.326
+        },
+        "wireless headphones": {
+          "successful_requests": 30,
+          "errors": 0,
+          "average_ms": 48.829,
+          "p50_ms": 48.365,
+          "p95_ms": 53.119,
+          "p99_ms": 54.562,
+          "max_ms": 55.06
+        }
+      },
+      "summary": {
+        "expected_requests": 150,
+        "successful_requests": 150,
+        "errors": 0,
+        "error_rate_percent": 0.0,
+        "minimum_ms": 4.675,
+        "average_ms": 48.557,
+        "p50_ms": 48.518,
+        "p95_ms": 52.666,
+        "p99_ms": 55.324,
+        "maximum_ms": 55.899
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "index": "products",
+  "documents": 2000,
+  "queries": [
+    {
+      "query": "laptop for students",
+      "baseline_p5": 1.0,
+      "improved_p5": 1.0,
+      "change_p5_percentage_points": 0.0,
+      "baseline_p10": 0.8,
+      "improved_p10": 0.8,
+      "change_p10_percentage_points": 0.0,
+      "baseline_p20": 0.9,
+      "improved_p20": 0.9,
+      "change_p20_percentage_points": 0.0
+    },
+    {
+      "query": "budget programming laptop",
+      "baseline_p5": 0.6,
+      "improved_p5": 1.0,
+      "change_p5_percentage_points": 40.0,
+      "baseline_p10": 0.6,
+      "improved_p10": 1.0,
+      "change_p10_percentage_points": 40.0,
+      "baseline_p20": 0.5,
+      "improved_p20": 0.5,
+      "change_p20_percentage_points": 0.0
+    },
+    {
+      "query": "gaming laptop",
+      "baseline_p5": 1.0,
+      "improved_p5": 1.0,
+      "change_p5_percentage_points": 0.0,
+      "baseline_p10": 1.0,
+      "improved_p10": 1.0,
+      "change_p10_percentage_points": 0.0,
+      "baseline_p20": 1.0,
+      "improved_p20": 1.0,
+      "change_p20_percentage_points": 0.0
+    },
+    {
+      "query": "wireless headphones",
+      "baseline_p5": 1.0,
+      "improved_p5": 1.0,
+      "change_p5_percentage_points": 0.0,
+      "baseline_p10": 1.0,
+      "improved_p10": 1.0,
+      "change_p10_percentage_points": 0.0,
+      "baseline_p20": 1.0,
+      "improved_p20": 1.0,
+      "change_p20_percentage_points": 0.0
+    },
+    {
+      "query": "mobile phone",
+      "baseline_p5": 1.0,
+      "improved_p5": 1.0,
+      "change_p5_percentage_points": 0.0,
+      "baseline_p10": 1.0,
+      "improved_p10": 1.0,
+      "change_p10_percentage_points": 0.0,
+      "baseline_p20": 1.0,
+      "improved_p20": 1.0,
+      "change_p20_percentage_points": 0.0
+    }
+  ]
+}

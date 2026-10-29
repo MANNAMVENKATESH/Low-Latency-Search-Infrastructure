@@ -1,9 +1,12 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel, Field
 from elasticsearch import Elasticsearch, helpers
 from datetime import datetime, timezone
 import logging
 import time
+import subprocess
+import json
 
 
 # ============================================================
@@ -13,6 +16,7 @@ import time
 ES_URL = "http://localhost:9200"
 INDEX_NAME = "products"
 REINDEX_TARGET = "products_reindexed_live"
+DOCKER_CONTAINER = "cloud30-elasticsearch"
 
 es = Elasticsearch(ES_URL)
 
@@ -30,6 +34,19 @@ logger = logging.getLogger("cloud30")
 
 
 # ============================================================
+# Runtime State
+# ============================================================
+
+availability_total = 0
+availability_success = 0
+availability_errors = 0
+
+failure_detected_at = None
+last_recovery_time_ms = None
+recovery_count = 0
+
+
+# ============================================================
 # FastAPI
 # ============================================================
 
@@ -40,6 +57,16 @@ app = FastAPI(
         "Relevance and Availability Under Cost"
     ),
     version="1.0.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
 )
 
 
@@ -64,14 +91,122 @@ class ProductUpdate(BaseModel):
 
 
 # ============================================================
-# Helper
+# Helpers
 # ============================================================
 
 def utc_now():
+    return datetime.now(timezone.utc).isoformat()
 
-    return datetime.now(
-        timezone.utc
-    ).isoformat()
+
+def check_elasticsearch():
+
+    global failure_detected_at
+    global last_recovery_time_ms
+    global recovery_count
+
+    start = time.perf_counter()
+
+    try:
+        connected = es.ping()
+
+        latency = (
+            time.perf_counter() - start
+        ) * 1000
+
+        if connected:
+
+            # Elasticsearch recovered after a failure
+            if failure_detected_at is not None:
+
+                recovery_time = (
+                    datetime.now(timezone.utc)
+                    - failure_detected_at
+                ).total_seconds() * 1000
+
+                last_recovery_time_ms = round(
+                    recovery_time,
+                    3
+                )
+
+                recovery_count += 1
+
+                logger.info(
+                    "RECOVERY completed recovery_time=%.3fms",
+                    recovery_time
+                )
+
+                failure_detected_at = None
+
+            return True, round(latency, 3)
+
+        # Elasticsearch unreachable
+        if failure_detected_at is None:
+            failure_detected_at = datetime.now(timezone.utc)
+
+            logger.warning(
+                "Elasticsearch failure detected"
+            )
+
+        return False, round(latency, 3)
+
+    except Exception as exc:
+
+        if failure_detected_at is None:
+            failure_detected_at = datetime.now(timezone.utc)
+
+            logger.warning(
+                "Elasticsearch failure detected: %s",
+                exc
+            )
+
+        return False, 0
+
+
+def docker_resource_usage():
+
+    try:
+
+        result = subprocess.run(
+            [
+                "docker",
+                "stats",
+                DOCKER_CONTAINER,
+                "--no-stream",
+                "--format",
+                "{{json .}}"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+
+        if result.returncode != 0:
+            return {
+                "available": False,
+                "error": result.stderr.strip()
+            }
+
+        data = json.loads(
+            result.stdout.strip()
+        )
+
+        return {
+            "available": True,
+            "container": DOCKER_CONTAINER,
+            "cpu_percent": data.get("CPUPerc"),
+            "memory_usage": data.get("MemUsage"),
+            "memory_percent": data.get("MemPerc"),
+            "network_io": data.get("NetIO"),
+            "block_io": data.get("BlockIO"),
+            "pids": data.get("PIDs")
+        }
+
+    except Exception as exc:
+
+        return {
+            "available": False,
+            "error": str(exc)
+        }
 
 
 # ============================================================
@@ -81,51 +216,23 @@ def utc_now():
 @app.get("/health")
 def health():
 
-    start = time.perf_counter()
+    connected, latency = check_elasticsearch()
 
-    try:
-
-        connected = es.ping()
-
-        latency = (
-            time.perf_counter() - start
-        ) * 1000
-
-        if connected:
-
-            return {
-                "status": "healthy",
-                "elasticsearch": "connected",
-                "latency_ms": round(
-                    latency,
-                    3
-                ),
-                "timestamp": utc_now()
-            }
+    if connected:
 
         return {
-            "status": "degraded",
-            "elasticsearch": "unreachable",
-            "latency_ms": round(
-                latency,
-                3
-            ),
+            "status": "healthy",
+            "elasticsearch": "connected",
+            "latency_ms": latency,
             "timestamp": utc_now()
         }
 
-    except Exception as exc:
-
-        logger.error(
-            "Health check failed: %s",
-            exc
-        )
-
-        return {
-            "status": "degraded",
-            "elasticsearch": "error",
-            "error": str(exc),
-            "timestamp": utc_now()
-        }
+    return {
+        "status": "degraded",
+        "elasticsearch": "unreachable",
+        "latency_ms": latency,
+        "timestamp": utc_now()
+    }
 
 
 # ============================================================
@@ -146,15 +253,49 @@ def search(
     )
 ):
 
+    global availability_total
+    global availability_success
+    global availability_errors
+
+    availability_total += 1
+
     start = time.perf_counter()
 
     try:
 
+        # ----------------------------------------------------
+        # Check Elasticsearch
+        # ----------------------------------------------------
+
+        connected, _ = check_elasticsearch()
+
+        if not connected:
+
+            availability_errors += 1
+
+            return {
+                "status": "degraded",
+                "query": q,
+                "count": 0,
+                "latency_ms": round(
+                    (time.perf_counter() - start) * 1000,
+                    3
+                ),
+                "message": (
+                    "Search service temporarily unavailable"
+                ),
+                "results": []
+            }
+
+        # ----------------------------------------------------
         # O3 relevance strategy
+        # ----------------------------------------------------
+
         if q.lower().strip() == "budget programming laptop":
 
             search_query = {
                 "bool": {
+
                     "must": [
                         {
                             "multi_match": {
@@ -167,6 +308,7 @@ def search(
                             }
                         }
                     ],
+
                     "should": [
                         {
                             "range": {
@@ -192,6 +334,10 @@ def search(
                     ]
                 }
             }
+
+        # ----------------------------------------------------
+        # Elasticsearch search
+        # ----------------------------------------------------
 
         response = es.search(
             index=INDEX_NAME,
@@ -240,6 +386,8 @@ def search(
                 "score": hit["_score"]
             })
 
+        availability_success += 1
+
         logger.info(
             "SEARCH query='%s' results=%d latency=%.3fms",
             q,
@@ -248,6 +396,7 @@ def search(
         )
 
         return {
+            "status": "healthy",
             "query": q,
             "count": len(results),
             "latency_ms": round(
@@ -258,6 +407,8 @@ def search(
         }
 
     except Exception as exc:
+
+        availability_errors += 1
 
         elapsed = (
             time.perf_counter() - start
@@ -270,6 +421,7 @@ def search(
         )
 
         return {
+            "status": "degraded",
             "query": q,
             "count": 0,
             "latency_ms": round(
@@ -277,8 +429,103 @@ def search(
                 3
             ),
             "error": str(exc),
+            "message": (
+                "Search service temporarily unavailable"
+            ),
             "results": []
         }
+
+
+# ============================================================
+# System State
+# ============================================================
+
+@app.get("/system/state")
+def system_state():
+
+    connected, latency = check_elasticsearch()
+
+    return {
+        "mode": (
+            "NORMAL"
+            if connected
+            else "DEGRADED"
+        ),
+        "elasticsearch": (
+            "connected"
+            if connected
+            else "unreachable"
+        ),
+        "health_latency_ms": latency,
+        "timestamp": utc_now()
+    }
+
+
+# ============================================================
+# Availability
+# ============================================================
+
+@app.get("/availability")
+def availability():
+
+    if availability_total == 0:
+
+        availability_percent = 100.0
+        error_rate = 0.0
+
+    else:
+
+        availability_percent = (
+            availability_success
+            / availability_total
+        ) * 100
+
+        error_rate = (
+            availability_errors
+            / availability_total
+        ) * 100
+
+    return {
+        "total_requests": availability_total,
+        "successful_requests": availability_success,
+        "failed_requests": availability_errors,
+        "availability_percent": round(
+            availability_percent,
+            2
+        ),
+        "error_rate_percent": round(
+            error_rate,
+            2
+        ),
+        "timestamp": utc_now()
+    }
+
+
+# ============================================================
+# Recovery
+# ============================================================
+
+@app.get("/recovery")
+def recovery():
+
+    connected, latency = check_elasticsearch()
+
+    return {
+        "current_status": (
+            "healthy"
+            if connected
+            else "degraded"
+        ),
+        "failure_active": (
+            failure_detected_at is not None
+        ),
+        "recovery_count": recovery_count,
+        "last_recovery_time_ms": (
+            last_recovery_time_ms
+        ),
+        "current_health_latency_ms": latency,
+        "timestamp": utc_now()
+    }
 
 
 # ============================================================
@@ -303,11 +550,22 @@ def metrics():
             ["store"]["size_in_bytes"]
         )
 
+        connected, _ = check_elasticsearch()
+
         return {
             "index": INDEX_NAME,
             "documents": count,
             "index_size_bytes": index_size,
-            "elasticsearch": "connected",
+            "elasticsearch": (
+                "connected"
+                if connected
+                else "unavailable"
+            ),
+            "availability": {
+                "total_requests": availability_total,
+                "successful": availability_success,
+                "errors": availability_errors
+            },
             "timestamp": utc_now()
         }
 
@@ -323,6 +581,52 @@ def metrics():
             "documents": 0,
             "index_size_bytes": 0,
             "elasticsearch": "unavailable",
+            "error": str(exc),
+            "timestamp": utc_now()
+        }
+
+
+# ============================================================
+# Cost / Resource Monitoring
+# ============================================================
+
+@app.get("/cost")
+def cost():
+
+    try:
+
+        count = es.count(
+            index=INDEX_NAME
+        )["count"]
+
+        stats = es.indices.stats(
+            index=INDEX_NAME
+        )
+
+        index_size = (
+            stats["_all"]["primaries"]
+            ["store"]["size_in_bytes"]
+        )
+
+        resources = docker_resource_usage()
+
+        return {
+            "environment": "local Docker",
+            "index": INDEX_NAME,
+            "documents": count,
+            "index_size_bytes": index_size,
+            "resource_usage": resources,
+            "cost_control_metric": (
+                "resource consumption"
+            ),
+            "timestamp": utc_now()
+        }
+
+    except Exception as exc:
+
+        return {
+            "environment": "local Docker",
+            "status": "unavailable",
             "error": str(exc),
             "timestamp": utc_now()
         }
@@ -467,7 +771,7 @@ def reindex():
                 index=REINDEX_TARGET
             )
 
-        # Create target using source mapping.
+        # Get source mapping.
         source_mapping = es.indices.get_mapping(
             index=INDEX_NAME
         )

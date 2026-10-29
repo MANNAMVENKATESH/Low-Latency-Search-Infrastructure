@@ -1,0 +1,38 @@
+{
+  "benchmark": "CLOUD-30 O5 AC-2 Client vs Server Timing Diagnostic",
+  "timestamp": "2026-10-26T03:13:02.394726",
+  "index": "products",
+  "trials_per_query": 30,
+  "queries": {
+    "laptop for students": {
+      "client_average_ms": 48.112,
+      "client_p95_ms": 49.673,
+      "server_took_average_ms": 2.1,
+      "server_took_p95_ms": 3.0
+    },
+    "budget programming laptop": {
+      "client_average_ms": 47.985,
+      "client_p95_ms": 50.227,
+      "server_took_average_ms": 1.9,
+      "server_took_p95_ms": 3.0
+    },
+    "mobile phone with good camera": {
+      "client_average_ms": 48.14,
+      "client_p95_ms": 52.454,
+      "server_took_average_ms": 1.6,
+      "server_took_p95_ms": 3.55
+    },
+    "affordable gaming laptop": {
+      "client_average_ms": 47.868,
+      "client_p95_ms": 50.581,
+      "server_took_average_ms": 1.4,
+      "server_took_p95_ms": 2.0
+    },
+    "wireless headphones": {
+      "client_average_ms": 46.416,
+      "client_p95_ms": 51.317,
+      "server_took_average_ms": 1.433,
+      "server_took_p95_ms": 3.0
+    }
+  }
+}
